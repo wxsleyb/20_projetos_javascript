@@ -79,12 +79,12 @@ function convert(){
     const toLabel = toElement.options[toElement.selectedIndex].text
 
     const message = `${inputElement.value} ${fromLabel} equivalem a ${result} ${toLabel}`;
-    
+
     messageElement.textContent = message;
     return;
 
-    console.log(fromValue, toValue);
-    console.log(meters, result);
+    //console.log(fromValue, toValue);
+    //console.log(meters, result);
 }
 
 convertButton.addEventListener("click", convert);
