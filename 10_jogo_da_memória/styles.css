@@ -1,0 +1,112 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body{
+    background-color: #ccc;
+}
+h2 {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.congratulations {
+    font-size: 1.5rem;
+    padding: .4rem;
+    background-color: #0a790a;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 500px;
+    margin: 1rem auto;
+}
+
+.congratulations-container {
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card {
+    position: relative;
+    height: 200px;
+    cursor: pointer;
+    
+}
+
+.card .front,
+.card .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card .front{
+    border: 1px solid black;
+    display: flex;
+    font-size: 48px;
+    transform: rotateY(180deg);
+    transition: 0.4s;
+}
+
+.card .back {
+    background-size: cover;
+    background-position: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+    transform: rotateY(0deg);
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.card.flip .front{
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+
+.card.flip .back{
+    transform: rotateY(0deg);
+}
+
+.attempts-container {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.attempts {
+    font-size: 24px;
+}
+
+/* Estilos básicos do botão */
+#restart-button {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #090e8c; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+  
+/* Efeito hover (quando o mouse está em cima do botão) */
+#restart-button:hover {
+    background-color: #0870ef; /* Cor de fundo alterada no hover */
+    transition: 0.4s;
+}
+  
+  
