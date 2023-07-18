@@ -2,7 +2,7 @@ const converterForm = document.querySelector("#converterForm");
 const converterInput = document.querySelector("#converterInput");
 const jsonToCsvButton = document.querySelector("#jsonToCsvButton");
 const csvToJsonButton = document.querySelector("#csvToJsonButton");
-const copyJsonButton = document.querySelector("#copiar-json")
+const copyJsonButton = document.querySelector("#copiar-json");
 
 function jsonToCsv(json) {
     const headers = Object.keys(json[0])
@@ -61,9 +61,9 @@ function csvToJson(csv) {
 
 jsonToCsvButton.addEventListener("click", function () {
     const json = JSON.parse(converterInput.value.trim())
-    const csv = jsonToCsv(json);
+    csv = jsonToCsv(json);
+    downloadCsv(csv);
 
-    downloadCsv(csv)
 });
 
 csvToJsonButton.addEventListener("click", function () {
@@ -75,6 +75,7 @@ csvToJsonButton.addEventListener("click", function () {
 })
 
 copyJsonButton.addEventListener("click", copyJSON);
+downloadCsvButton.addEventListener("click", downloadCsv);
 
 function downloadCsv(csv) {
     const downloadLink = document.createElement("a");
@@ -117,9 +118,9 @@ function copyJSON() {
                 const alertMessage = "JSON copiado para a área de transferência.";
                 alert(alertMessage);
 
-                // Exibir o alerta por 3 segundos (3000 milissegundos)
+                
                 setTimeout(() => {
-                    // Código vazio aqui, não é necessário fazer nada.
+                    
                 }, 3000);
             },
             (err) => {

@@ -41,7 +41,9 @@ button {
     font-size: 1rem;
     background-color: #007bff;
     border-radius: 5px;
+    font-weight: bold;
     border: none;
+    color: #fff;
     cursor: pointer;
     transition: 0.4s;
 }
