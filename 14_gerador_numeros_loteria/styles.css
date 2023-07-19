@@ -1,0 +1,223 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f8f8;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    margin: 2rem;
+    background-color: #e1dada;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+    
+}
+
+h1, h2{
+    margin-top: 0;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bolder;
+    
+}
+
+#megasena {
+    color: rgb(26, 122, 84);
+
+}
+
+#quina {
+    color: rgb(30, 0, 106);
+}
+
+#lotomania{
+    color: rgb(255, 148, 31);
+}
+
+#duplasena{
+    color: rgb(153, 20, 62);
+}
+
+#lotofacil{
+    color: rgb(255, 101, 245);
+}
+
+p{
+    margin-bottom: 1.8rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+#numbers{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+#megaSenaNumbers .number{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: rgb(26, 122, 84);
+
+}
+
+#generateMegaSena {
+    display: block;
+    margin: 0 auto;
+    padding: .8rem 1.2rem;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: rgb(26, 122, 84);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-bottom: 50px;
+}
+
+#quinaNumbers .number{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color:rgb(30, 0, 106);
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+
+#generateQuina  {
+    display: block;
+    margin: 0 auto;
+    padding: .8rem 1.2rem;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: rgb(30, 0, 106);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-bottom: 50px;
+}
+
+
+#lotomaniaNumbers .number{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(255, 148, 31);;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#generateLotomania {
+    display: block;
+    margin: 0 auto;
+    padding: .8rem 1.2rem;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color:rgb(255, 148, 31);;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-bottom: 50px;
+}
+
+
+#duplaSenaNumbers1 .number,
+#duplaSenaNumbers2 .number{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(153, 20, 62);
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#generateDuplaSena1, #generateDuplaSena2 {
+    display: block;
+    margin: 0 auto;
+    padding: .8rem 1.2rem;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: rgb(153, 20, 62);;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-bottom: 50px;
+}
+
+#lotofacilNumbers .number{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(255, 101, 245);
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#generateLotofacil {
+    display: block;
+    margin: 0 auto;
+    padding: .8rem 1.2rem;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: rgb(255, 101, 245);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-bottom: 50px;
+}
+
+
+#generateMegaSena:hover{
+    background-color: rgb(19, 175, 112);
+}
+
+#generateQuina:hover{
+    background-color: rgb(35, 37, 149);
+}
+
+#generateLotomania:hover{
+    background-color: #d15a05;
+}
+
+#generateDuplaSena1:hover,
+#generateDuplaSena2:hover{
+    background-color: #530303;
+}
+
+#generateLotofacil:hover {
+    background-color: #970088;
+}
+
+
+.section-title {
+    border-bottom: 2px solid #464646; /* Adicione uma borda inferior de 2px na cor cinza */
+    padding-bottom: 10px; /* Espaçamento opcional para melhorar a aparência */
+    margin-bottom: 20px; /* Espaçamento opcional para melhorar a aparência */
+}
