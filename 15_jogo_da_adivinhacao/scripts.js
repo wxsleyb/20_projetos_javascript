@@ -17,16 +17,16 @@ difficultySelect.addEventListener("change", function () {
 
     switch (difficulty) {
         case 1:
-            maxTries = 10;
+            maxTries = 15;
             break;
         case 2:
-            maxTries = 7;
+            maxTries = 10;
             break;
         case 3:
-            maxTries = 5;
+            maxTries = 8;
             break;
         default:
-            maxTries = 10;
+            maxTries = 15;
             break;
     }
     triesLeft = maxTries;
@@ -40,13 +40,13 @@ difficultySelect.addEventListener("change", function () {
 
 });
 
-guessButton.addEventListener("click", function () {
+function verificaNumero (){
     const guess = parseInt(guessInput.value);
-    const range = 10;
+    const range = 15;
     console.log(randomNumber)
 
 
-    if (isNaN(guess) || guess < 1 || guess > 100) {
+    if (isNaN(guess) || guess < 1 || guess > 1000) {
         resultParagraph.textContent = "Por favor, insira um número de 1 a 100."
     } else {
         if (guess > randomNumber) {
@@ -81,8 +81,18 @@ guessButton.addEventListener("click", function () {
 
         guessInput.value = "";
     }
-});
 
+}
+
+
+
+guessButton.addEventListener("click", verificaNumero)
+guessInput.addEventListener("keydown", function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault(); // Evita que o formulário seja submetido, caso esteja dentro de um formulário.
+        verificaNumero();
+    }
+});
 
 function resetGame() {
     difficultySection.style.display = 'flex';
