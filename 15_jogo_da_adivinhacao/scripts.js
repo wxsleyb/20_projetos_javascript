@@ -32,7 +32,7 @@ difficultySelect.addEventListener("change", function () {
     triesLeft = maxTries;
     triesLeftSpan.textContent = maxTries
 
-    randomNumber = Math.floor(Math.random() * 100) + 1;
+    randomNumber = Math.floor(Math.random() * 1000) + 1;
     difficultySection.style.display = 'none';
     gameSection.style.display = 'block';
     guessSection.style.display = 'flex';
@@ -95,6 +95,7 @@ guessInput.addEventListener("keydown", function (event) {
 });
 
 function resetGame() {
+    difficultySelect.value = "0"
     difficultySection.style.display = 'flex';
     gameSection.style.display = 'none';
     guessSection.style.display = 'none';
