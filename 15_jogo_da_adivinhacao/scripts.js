@@ -12,10 +12,10 @@ let maxTries;
 let randomNumber;
 let triesLeft;
 
-difficultySelect.addEventListener("change", function(){
+difficultySelect.addEventListener("change", function () {
     const difficulty = parseInt(difficultySelect.value);
 
-    switch (difficulty){
+    switch (difficulty) {
         case 1:
             maxTries = 10;
             break;
@@ -27,23 +27,26 @@ difficultySelect.addEventListener("change", function(){
             break;
         default:
             maxTries = 10;
-            break;            
+            break;
     }
     triesLeft = maxTries;
     triesLeftSpan.textContent = maxTries
 
-    randomNumber = Math.floor(Math.random()*100)+1;
+    randomNumber = Math.floor(Math.random() * 100) + 1;
     difficultySection.style.display = 'none';
     gameSection.style.display = 'block';
     guessSection.style.display = 'flex';
 
+
 });
 
-guessButton.addEventListener("click", function(){
+guessButton.addEventListener("click", function () {
     const guess = parseInt(guessInput.value);
     const range = 10;
+    console.log(randomNumber)
 
-    if(isNaN(guess) || guess < 1 || guess > 100){
+
+    if (isNaN(guess) || guess < 1 || guess > 100) {
         resultParagraph.textContent = "Por favor, insira um número de 1 a 100."
     } else {
         if (guess > randomNumber) {
@@ -62,8 +65,14 @@ guessButton.addEventListener("click", function(){
             triesLeft--;
         }
 
-        if(triesLeft === 0){
+        if (triesLeft === 0) {
             resultParagraph.textContent = `Suas tentativas acabaram. O número correto era ${randomNumber}.`;
+            resetButton.style.display = "block";
+            guessSection.style.display = "none";
+        }
+
+        if (guess === randomNumber) {
+            resultParagraph.textContent = `Parabéns! Você acertou em ${maxTries - triesLeft} tentativa(s)`;
             resetButton.style.display = "block";
             guessSection.style.display = "none";
         }
@@ -75,12 +84,12 @@ guessButton.addEventListener("click", function(){
 });
 
 
-function resetGame(){
+function resetGame() {
     difficultySection.style.display = 'flex';
     gameSection.style.display = 'none';
     guessSection.style.display = 'none';
     resetButton.style.display = "none";
-    resultParagraph.textContent =""
+    resultParagraph.textContent = ""
 }
 
 resetButton.addEventListener("click", resetGame)
